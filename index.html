@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>pjBot</title>
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+
+	<style>
+		* {
+			box-sizing: border-box;
+			text-align: justify;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: wheat;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#head,
+		#foot {
+			position: fixed;
+			left: 0.5em;
+			right: 0.5em;
+			height: 7vh;
+			min-height: 2em;
+			display: grid;
+			background: #0008;
+			grid-template-columns: 1fr 3fr 1fr;
+			backdrop-filter: blur(5px) saturate(180%);
+			color: wheat;
+			font-weight: bold;
+			border-radius: 0.5em;
+			border: 2px solid #0008;
+		}
+
+		.heading {
+			display: grid;
+			width: 100%;
+			font-weight: bold;
+			grid-template-columns: 1fr 3fr 1fr;
+			font-size: 1.5em;
+			padding: 0.25em;
+			position: sticky;
+			top: 0;
+			background: #0008;
+			backdrop-filter: blur(5px) saturate(180%);
+			margin-bottom: 1em;
+		}
+
+		.darkBG {}
+
+		.lightBG {
+			background: wheat;
+			color: #000c;
+		}
+
+		#head>div,
+		#foot>div,
+		.heading>div {
+			height: 100%;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#head {
+			top: 0.5em;
+		}
+
+		#foot {
+			bottom: 0.5em;
+			z-index: 9999;
+		}
+
+		#mainCont {
+			padding: 50vh 0;
+			max-width: 80ch;
+			padding: 1em;
+		}
+
+		#donateCont,
+		#chatCont {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0 0 5vmin 0;
+			height: 100vh;
+			background: #0008;
+			backdrop-filter: blur(5px) grayscale(50%);
+			color: wheat;
+			padding-bottom: 11vh;
+			overflow-y: scroll;
+		}
+
+		#donateCont {
+			z-index: 600;
+		}
+
+		#chatCont {
+			z-index: 800;
+			width: 100%;
+		}
+
+		#donateCont>.donateItem {
+			background: wheat;
+			color: #000c;
+			border-radius: 0.5em;
+			padding: 1em;
+			width: calc(100% - 10vmin);
+			margin-bottom: 0.5em;
+			margin-top: 1em;
+		}
+
+		a.riCard {
+			display: grid;
+			grid-template-columns: 3.5em 1fr;
+			grid-template-rows: 3.5em;
+			border: 1px solid #000;
+			margin-bottom: 0.5em;
+			border-radius: 0.5em;
+			background: #0001;
+			color: #333;
+			text-decoration: none;
+		}
+
+		a.riCard>div:first-child {
+			display: grid;
+			place-content: center;
+		}
+
+		a.riCard>div {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.noScrl {
+			overflow: hidden;
+		}
+
+		.vjbtn {
+			cursor: pointer;
+		}
+
+		.vjbtn:focus,
+		.vjbtn:hover,
+		.vjbtn:active {
+			background: #fff5;
+			border-radius: 0.5em;
+		}
+
+		.btChat,
+		.stChat {
+			padding: 1em;
+			background: wheat;
+			width: calc(100% - 10vmin - 2em);
+			margin-bottom: 1em;
+			color: black;
+		}
+
+		.btChat {
+			border-radius: 1em 1em 1em 0;
+			background: wheat;
+			margin-right: 2em;
+		}
+
+		.stChat {
+			margin-left: 2em;
+			background: yellowgreen;
+			border-radius: 1em 1em 0 1em;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="head">
+		<div></div>
+		<div>Topic Name</div>
+		<div></div>
+	</div>
+	<div id="donateCont" hidden="hidden">
+		<div class="heading">
+			<div></div>
+			<div>Donation</div>
+			<div uk-toggle="target: #donateCont; animation: uk-animation-slide-bottom" class="lckScrl vjbtn">&times;
+			</div>
+		</div>
+		<div class="donateItem">
+			This app has been created by me in my spare time. I have to put in a lot of my work and time to keep
+			updating this app.<br />
+			If this app helped you in any way and if you want to help me in return, then please consider donating as
+			much as
+			you can.
+		</div>
+		<div class="donateItem">
+			<a class="riCard">
+				<div>
+					<span class="material-icons">
+						diamond
+					</span>
+				</div>
+				<div><span><b>Donate &nbsp; &#8377; 100+</b><br />(Help me pay my Bills)</span></div>
+			</a>
+			<a class="riCard">
+				<div>
+					<span class="material-icons">
+						sentiment_very_satisfied
+					</span>
+				</div>
+				<div><span><b>Donate &nbsp; &#8377; 50</b><br />(Buy me a NoteBook)</span></div>
+			</a>
+			<a class="riCard">
+				<div>
+					<span class="material-icons">
+						sentiment_satisfied_alt
+					</span>
+				</div>
+				<div><span><b>Donate &nbsp; &#8377; 10</b><br />(Buy me a cup of Tea)</span></div>
+			</a>
+			<a class="riCard">
+				<div>
+					<span class="material-icons">
+						sentiment_satisfied
+					</span>
+				</div>
+				<div><span><b>Donate &nbsp; &#8377; 5</b><br />(Buy me a pen)</span></div>
+			</a>
+		</div>
+	</div>
+	<div id="chatCont" hidden="hidden">
+		<div class="heading">
+			<div></div>
+			<div>Site Menu Chat</div>
+			<div uk-toggle="target: #chatCont; animation: uk-animation-slide-bottom" class="lckScrl vjbtn">&times;</div>
+		</div>
+		<div class="btChat">Bot Chat</div>
+		<div class="stChat">Student Chat</div>
+		<div class="btChat">Bot Chat</div>
+		<div class="stChat">Student Chat</div>
+		<div class="btChat">Bot Chat</div>
+		<div class="stChat">Student Chat</div>
+		<div class="btChat">Bot Chat</div>
+		<div class="stChat">Student Chat</div>
+		<div class="btChat">Bot Chat</div>
+		<div class="stChat">Student Chat</div>
+	</div>
+	<div id="foot">
+		<div uk-toggle="target: #donateCont; animation: uk-animation-slide-bottom" class="lckScrl vjbtn">
+			<span class="material-icons">
+				thumb_up
+			</span>
+		</div>
+		<div>Nurav Classes</div>
+		<div uk-toggle="target: #chatCont; animation: uk-animation-slide-bottom" class="lckScrl vjbtn">
+			<span class="material-icons">
+				auto_stories
+			</span>
+		</div>
+	</div>
+	<div id="mainCont">
+		MainCont
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ut rem mollitia nemo! Modi quod
+			pariatur, molestias delectus repudiandae eius fugiat, minus laborum eaque, voluptas autem necessitatibus
+			harum ipsam architecto?</p>
+		<p>Dolorum atque perferendis ipsa maxime, ab, reprehenderit cupiditate, illo dolore pariatur quisquam esse
+			molestias facilis delectus exercitationem nemo vel repellendus? Pariatur deserunt sit similique nisi
+			temporibus perferendis maiores illum saepe.</p>
+		<p>Tenetur ex obcaecati quia vel sequi aut, vero aperiam perspiciatis. Blanditiis neque debitis inventore
+			impedit ipsum, accusamus ducimus quidem doloremque in rerum quasi exercitationem a et minus maxime soluta
+			dicta?</p>
+		<p>Nobis delectus recusandae, at possimus, doloribus molestiae dolor aspernatur labore assumenda ipsum totam ad,
+			consequatur aliquam! Aperiam ullam ipsa animi voluptates? Eum delectus distinctio iure illo nesciunt nostrum
+			neque rerum?</p>
+		<p>Asperiores ad officia vero eveniet quam atque hic sunt eius consequatur, doloremque delectus tenetur labore
+			quis assumenda cumque, quaerat eos soluta suscipit quia ab vitae dicta expedita. Quae, cumque voluptates.
+		</p>
+		<p>Quae sapiente ea rem magnam officiis repudiandae hic consequatur nulla nostrum ipsam possimus inventore
+			tenetur recusandae sequi, earum error quaerat, consequuntur voluptas sint autem eveniet esse dolores!
+			Suscipit, voluptate veniam.</p>
+		<p>Nobis, possimus eaque. Quis numquam ea expedita maiores libero animi accusamus, eligendi vero officiis
+			ducimus repellat nulla esse? Quis nostrum ullam beatae dolore nesciunt ratione consectetur in ad est
+			asperiores!</p>
+		<p>Doloribus commodi alias natus, possimus consequatur, minus sapiente fugit id ex eaque voluptas adipisci dolor
+			aliquid suscipit animi molestias. Dolorem rerum tempore quas vero earum sequi hic architecto temporibus cum!
+		</p>
+		<p>Illo, quo sapiente at sint eligendi modi quae nulla incidunt, ea, magnam odit perspiciatis ipsa dolores
+			voluptatem quis dolore excepturi maxime cum itaque exercitationem. Nam, dolorum dolorem. Deserunt,
+			voluptatum optio.</p>
+		<p>Dolores magni suscipit, itaque sint rem eligendi quidem nostrum aspernatur cupiditate in. Inventore unde
+			perspiciatis laudantium blanditiis nemo! Modi beatae reiciendis nulla possimus nihil nobis corrupti quod
+			dolore aliquid sequi.</p>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script>
+		$(function () {
+			let chatList = {
+				intro: {
+					q: "नमस्कार, मेरा नाम है <b>बिट्टू</b>. मैं पुष्पा टीचर का डिजिटल सहायक हूँ."
+				},
+				class:{
+					q:"आप कौन सी कक्षा में पड़ते हो?",
+					o: [
+						{
+							c:"पाँचवीं (5th)",
+							t:"fifth"
+						}, {
+							c:"छटी (6th)",
+							t:"sixth"
+						}, {
+							c:"सातवीं (7th)",
+							t:"seventh"
+						}
+					]
+				},
+				fifth:{
+					q:"आप कौन सा पाठ पढ़ना चाहते हैं?",
+					o: [
+						{
+							c:"४. एक पत्र सखी के नाम",
+							t:"",
+							u:"hindi0504-reading.html"
+						}, {
+							c:"छटी (6th)",
+							t:"sixth"
+						}, {
+							c:"सातवीं (7th)",
+							t:"seventh"
+						}
+					]
+				}
+		}
+
+			$(".lckScrl").click(function () {
+			$("html").toggleClass("noScrl");
+			$("body").toggleClass("noScrl");
+		});
+		});
+	</script>
+</body>
+
+</html>

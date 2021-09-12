@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="#pushpaTr - Hindi Teacher" />
+	<meta property="og:image" itemprop="image" content="https://pushpatr.github.io/2021-22/a/patra.jpg" />
+	<meta name="description" content="Reading 'एक पत्र सखी के नाम' with meanings of difficult words." />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
+	<title>Hindi05-TB04-Reading</title>
+
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		html, body{
+			margin: 0;
+			padding: 0;
+			background: wheat;
+			font-size: 18pt;
+			font-family: 'Eczar', serif;
+		}
+		body{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 80vh;
+			word-spacing: 0.4em;
+		}
+		#mainCont{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			width: 100%;
+			padding: 1.5em;
+			text-align: justify;
+		}
+		#head, #foot{
+			position: fixed;
+			left: 0; right: 0;
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 8vh;
+			min-height: 54px;
+			background: #0009;
+			color: wheat;
+			align-items: center;
+			justify-content: center;
+			font-weight: bold;
+		}
+		#head{
+			top:0;
+			font-weight: bold;
+			font-size: 1.2em;
+			box-shadow: 0 0 10px #0009;
+			border-bottom: 4px solid #0006;
+		}
+		.meaning {
+			font-weight: 600;
+			display: inline-block;
+			background: #00000018;
+			color: seagreen;
+			padding: 0em 0.4em;
+			margin: 0 -0.2em;
+			border-radius: 0.25em;
+			font-size: 18pt;
+		}
+		div.uk-tooltip.uk-active{
+			background: #444;
+			padding: 0.25em 0.5em;
+			position: relative;
+			border-radius: 0.25em;
+			border: 2px solid black;
+			font-size: 0.8em;
+		}
+		div.uk-tooltip.uk-active::before{
+			display: block;
+			content: "";
+			bottom: -8px;
+			left: calc(50% - 10px);
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 8px 10px 0 10px;
+			border-color: #000000 transparent transparent transparent;
+		}
+		#lessonEnd{
+			width: 100%;
+			text-align: center;
+			height: 40vh;
+			padding: 10vh 0;
+		}
+		@supports (backdrop-filter: blur()) {
+			#head {
+				background: #0009;
+				backdrop-filter: blur(5px);
+			}
+			div.uk-tooltip.uk-active{
+				background: #0009;
+				backdrop-filter: blur(5px);
+			}
+		}
+		.grn{color: seagreen;}
+		.blu{color: cornflowerblue;}
+		.pnk{color: hotpink;}
+		.prp{color: mediumpurple;}
+		.red{color: firebrick;}
+		.org{color: orangered;}
+		.mean{
+			color: aqua;
+		}
+		div.uk-tooltip.uk-active b{
+			color: aqua;
+		}
+	</style>
+</head>
+<body>
+	<div id="head">एक पत्र सखी के नाम</div>
+	<div id="mainCont">
+		<br><br>
+		This lesson is a letter sent by Aastha to her friend Shyamla.<br>
+		<div id="lessonCont" style="border-top: 2px solid #0005;">
+			&nbsp; <br>
+			सी-२८, मल्कागंज, दिल्ली<br>
+			२० जून, २०२१ <br>
+			<br>
+			प्रिय श्यामला,<br/>
+			<p>कल मौसी की शादी हो गई। हमने खूब मिठाई खाई। बहुत मज़े किए। नानाजी हमें जयपुर घुमाने ले गए। जयपुर में अधिकतर भवन लाल पत्थरों से बने थे। इसलिए इसे गुलाबी नगरी भी कहते हैं।</p>
+			<p>हम सबसे पहले सिटी पैलेस गए। सिटी पैलेस जयपुर का लैंडमार्क है। इस के प्रवेश द्वार पर संगमरमर के दो नक्काशीदार हाथी खड़े हैं। इसमें कई भवन, आँगन, बाग तथा मंदिर हैं। पुराने जमाने के कीमती सामान को यहाँ सँभालकर रखा गया है।</p>
+			<p>सिटी पैलेस से कुछ दूर पत्थर की वेधशाला है, जिसे जंतर-मंतर कहते हैं। इसमें समय को मापने, ग्रहण का पता लगाने तथा तारों को देखने के उपकरण शामिल हैं।</p>
+			<p>फिर नानाजी हमें हवामहल घुमाने ले गए। यह पाँच मंजिला इमारत है। इसमें १००० छोटी खिड़कियाँ हैं। इसे इस प्रकार बनाया गया है कि अंदर से बाहर का दृश्य देखा जा सकता है, लेकिन बाहर से अंदर का दृश्य दिखाई नहीं देता। इसका डिजाइन जालीदार है, इसीलिए गरमियों में भी ठंडी हवा इस महल में आती है।</p>
+			<p>नानाजी जब आमेर के किले लेकर गए तो सच में मज़ा आ गया। आमेर का किला लाल संगमरमर तथा बलुवा पत्थरों से बना है। यह पहाड़ की चोटी पर स्थित है। इसमें मुझे शीशमहल बहुत अच्छा लगा। हमने नाहरगढ़ किला, रामगढ़ झील तथा रामनिवास बाग देखे।</p>
+			<p>अगर तुम कभी जयपुर जाओ तो इन स्थानों को देखना मत भूलना। अरे, मैं जलमहल की बात तो भूल ही गई। जलमहल जयपुर शहर की सागर झील के बीच में स्थित है। चाँदनी रात में झील के पानी में यह महल बहुत सुंदर लगता है। इसका चमेली बाग तो बहुत ही खूबसूरत है।</p>
+			<p>मैं तुम्हें पत्र के साथ जयपुर के कुछ चित्र भेज रही हूँ। देख कर बताना तुम्हें कौन-सा चित्र सबसे अच्छा लगा।</p>
+			<p>चाचाजी तथा चाचीजी को मेरा प्रणाम कहना और गुड्­डू को बहुत-बहुत प्यार।
+			</p><br/>
+			तुम्हारी सहेली,<br/>
+			आस्था
+			<div id="lessonEnd"> * * * * * </div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+	<script>
+		$(function() {
+
+			let wordList = [
+				{w:"सी-२८,",e:"सी-अट्­ठाईस / <br>सी-अट्ठाईस"},
+				{w:"२० जून, २०२१",e:"बीस जून, दो हजार इक्कीस"},
+				{w:"प्रिय श्यामला,",e:"Dear Shyamla,"},
+				{w:"कल ",e:"Yesterday"},
+				{w:" मौसी ",e:"माँ की बहन, Mother\'s Sister"},
+				{w:" शादी ",e:"विवाह, marriage"},
+				{w:" खूब ",e:"बहुत, lots of"},
+				{w:" मिठाई ",e:"sweet"},
+				{w:" नानाजी ",e:"Mother\'s father (Grandpa)"},
+				{w:" जयपुर ",e:"<img src=\'../a/jaipur.jpg\' /><br/>Jaipur is the capital city of Rajasthan"},
+				{w:" घुमाने ले गए",e:"to take on a trip"},
+				{w:" अधिकतर ",e:"ज्यादातर, most"},
+				{w:" भवन ",e:"इमारत, buildings"},
+				{w:" बने ",e:"built"},
+				{w:" लाल पत्थरों ",e:"<img src=\'../a/redStone.jpg\' /><br/>Red-stones"},
+				{w:" इसलिए ",e:"so, that is why"},
+				{w:" सबसे पहले ",e:"first of all"},
+				{w:" सिटी पैलेस ",e:"<img src=\'../a/cityPalace.jpg\' /><br/>City-Palace"},
+				{w:" गुलाबी नगरी ",e:"<img src=\'../a/pinkCity.jpg\' /><br/>Pink-City"},
+				{w:" लैंडमार्क ",e:"landmark (famous place of a locality)"},
+				{w:" प्रवेश ",e:"enterance"},
+				{w:" द्वार ",e:"gate, door"},
+				{w:" संगमरमर ",e:"<img src=\'../a/marble.jpg\' /><br/>white marble"},
+				{w:" नक्काशीदार ",e:"<img src=\'../a/chisel.jpg\' /><br/>carved, chiseled, sculpted"},
+				{w:" हाथी ",e:"<img src=\'../a/haathi.jpg\' /><br/>elephant"},
+				{w:" खड़े ",e:"standing"},
+				{w:" आँगन",e:"courtyard, an open space without a roof, surrounded by buildings"},
+				{w:" बाग ",e:"garden, park"},
+				{w:" तथा ",e:"and"},
+				{w:" मंदिर ",e:"temple"},
+				{w:" पुराने जमाने ",e:"of old period, of ancient times"},
+				{w:" कीमती ",e:"valuable, costly"},
+				{w:" सँभालकर ",e:"with care"},
+				{w:" रखा ",e:"kept"},
+				{w:" कुछ दूर ",e:"near,<br>at a little distance, not very far"},
+				{w:" वेधशाला ",e:"observatory, planetarium"},
+				{w:" जंतर-मंतर ",e:"<img src=\'../a/jantarMantar.jpg\' /><br/>Jantar-Mantar & Delhi"},
+				{w:" समय ",e:"time"},
+				{w:" मापने",e:"measuring"},
+				{w:" ग्रहण ",e:"eclipse"},
+				{w:" तारों ",e:"stars"},
+				{w:" उपकरण ",e:"instrument, tool, device"},
+				{w:" शामिल ",e:"included"},
+				{w:" हवामहल",e:"<img src=\'../a/hawaMahal.jpg\' /><br/>Wind-Palace"},
+				{w:" पाँच मंजिला इमारत ",e:"five storeyed building"},
+				{w:" छोटी ",e:"small"},
+				{w:" खिड़कियाँ ",e:"windows"},
+				{w:" बलुवा पत्थरों ",e:"<img src=\'../a/sandStone.jpg\' /><br/>Sandstones"},
+				{w:" लाल संगमरमर ",e:"<img src=\'../a/redMarble.jpg\' /><br/>Red marble"},
+				{w:" खिड़कियाँ ",e:"windows"},
+				{w:" इस प्रकार ",e:"like this"},
+				{w:" बनाया ",e:"built"},
+				{w:" अंदर ",e:"inside"},
+				{w:" बाहर ",e:"outside"},
+				{w:" दृश्य ",e:"नज़ारा, view, scene"},
+				{w:" लेकिन ",e:"but"},
+				{w:" डिजाइन ",e:"design, pattern"},
+				{w:" जालीदार ",e:"<img src=\'../a/mesh.jpg\' /><br/>contains net-like pattern, mesh"},
+				{w:" गरमियों ",e:"during summer season"},
+				{w:" ठंडी ",e:"cold"},
+				{w:" आती ",e:"comes, enters"},
+				{w:" आमेर के किले ",e:"<img src=\'../a/amerFort.jpg\' /><br/>आमेर का किले -<br>Amer Fort"},
+				{w:" पहाड़ की चोटी ",e:"mountain peak, top part of a mountain"},
+				{w:" स्थित ",e:"located, situated"},
+				{w:" शीशमहल ",e:"<img src=\'../a/seeshMahal.jpg\' /><br/>Mirror-Palace / Glass-Palace, it is in Amer-Fort"},
+				{w:" नाहरगढ़ किला",e:"<img src=\'../a/nahargarhFort.jpg\' /><br/>Nahargarh Fort"},
+				{w:" रामगढ़ झील ",e:"<img src=\'../a/jheel.jpg\' /><br/>Ramgarh Lake"},
+				{w:" रामनिवास बाग ",e:"<img src=\'../a/baagh.jpg\' /><br/>RamNivas Garden"},
+				{w:"अगर ",e:"if"},
+				{w:" मत भूलना",e:"don\'t forget"},
+				{w:" जलमहल ",e:"<img src=\'../a/jalMahal.jpg\' /><br/>Water-Palace"},
+				{w:" सागर झील ",e:"<img src=\'../a/sagarJheel.jpg\' /><br/>Saagar-Lake"},
+				{w:" चांदनी रात ",e:"<img src=\'../a/moonlight.jpg\' /><br/>night with moonlight"},
+				{w:" चमेली बाग ",e:"<img src=\'../a/chameliBagh.jpg\' /><br/>Chameli-Baag (Jasmine Garden), it is a garden within JalMahal"},
+				{w:"चाचाजी ",e:"father\'s brother, uncle"},
+				{w:" चाचीजी ",e:"wife of father\'s brother, aunt"},
+				{w:" मेरा प्रणाम ",e:"my greetings"},
+				{w:" गुड्­डू ",e:"Guddu, a boy\'s name"},
+				{w:"तुम्हारी सहेली,",e:"Your friend,"},
+				{w:" खूबसूरत ",e:"Beautiful"},
+				{w:" चित्र ",e:"picture, photo, image"},
+				{w:" कौन-सा ",e:"which"},
+				{w:"आस्था",e:"Aastha"},
+				{w:" ",e:""},/*
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},
+				{w:" ",e:""},*/
+			]
+
+			
+			let colorList = [
+				"grn", "org", "blu", "pnk", "prp", "red"
+			]
+			let wordW = "", wordE = "";
+			let i = 0;
+
+			for (const word of wordList) {
+				let colorF = i % 6;
+				wordW = word.w;
+				wordE = word.e;
+				$("#lessonCont").html($("#lessonCont").html().replace(word.w,' <span class="meaning ' + colorList[colorF] + '" uk-tooltip="<b>' + word.w + '</b><br/>' + word.e + '">' + word.w + '</span> '));				i = i + 1;
+			}
+
+			$("#head").click(function () {
+				toggleFullScreen();
+			});
+			$("#lessonCont > p").prepend("&nbsp;&nbsp;&nbsp;");
+			function toggleFullScreen(){document.fullscreenElement||document.mozFullScreenElement||document.webkitFullscreenElement||document.msFullscreenElement?document.exitFullscreen?document.exitFullscreen():document.msExitFullscreen?document.msExitFullscreen():document.mozCancelFullScreen?document.mozCancelFullScreen():document.webkitExitFullscreen&&document.webkitExitFullscreen():document.documentElement.requestFullscreen?document.documentElement.requestFullscreen():document.documentElement.msRequestFullscreen?document.documentElement.msRequestFullscreen():document.documentElement.mozRequestFullScreen?document.documentElement.mozRequestFullScreen():document.documentElement.webkitRequestFullscreen&&document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)}
+		});
+	</script>
+</body>
+</html>
